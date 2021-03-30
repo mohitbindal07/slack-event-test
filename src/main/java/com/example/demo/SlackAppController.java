@@ -14,13 +14,13 @@ import com.jayway.jsonpath.JsonPath;
 import com.slack.api.bolt.App;
 import com.slack.api.bolt.servlet.SlackAppServlet;
 
-//@WebServlet("/slack/events")
+@WebServlet("/slack/events")
 public class SlackAppController extends SlackAppServlet {
     public SlackAppController(App app) {
         super(app);
     }
     
-   @RequestMapping(value = "/slack/events",
+  /* @RequestMapping(value = "/slack/events",
             method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String,String>> slackEventAPIAuth(String request) {
@@ -38,5 +38,5 @@ public class SlackAppController extends SlackAppServlet {
 		 return new ResponseEntity<Map<String,String>>(map, HttpStatus.OK);
 	 }
 	 return new ResponseEntity<Map<String,String>>(map, HttpStatus.OK);
- }
+ }*/
 }
