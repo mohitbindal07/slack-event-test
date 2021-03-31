@@ -81,6 +81,10 @@ public class SlackApp {
 			}
 			return ctx.ack();
 		});
+		
+		app.command("/hello", (req, ctx) -> {
+		      return ctx.ack("What's up?");
+	   	 });
 
 		return app;
 	
